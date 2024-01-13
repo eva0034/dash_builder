@@ -1,10 +1,13 @@
-PUMP 1000M
+PUMP 3000M
 
 # Update OS and sources
 INSTALL 777 "patches/dash_pimod.patch" "/home/pi/dash_pimod.patch"
 INSTALL 777 "scripts/compile.sh" "/root/run.sh"
 RUN bash /root/run.sh 
 RUN rm /root/run.sh
+
+# Install automatic app loading script
+INSTALL 777 "scripts/run_dash.sh" "/home/pi/dash/run_dash.sh"
 
 # Add autologin and dash service
 INCLUDE dash_service.Pifile

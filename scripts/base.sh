@@ -14,7 +14,7 @@ sudo adduser pi sudo
 # Setup ntp
 apt-get install -y ntp ntpdate
 service ntp stop
-ntpdate 0.us.pool.ntp.org
+ntpdate 0.au.pool.ntp.org
 service ntp start
 # Disable boot text
 echo -n "logo.nologo loglevel=3 quiet plymouth.ignore-serial-consoles fastboot systemd.run=/boot/firstrun.sh systemd.run_success_action=reboot systemd.unit=kernel-command-line.target" >>  /boot/cmdline.txt
