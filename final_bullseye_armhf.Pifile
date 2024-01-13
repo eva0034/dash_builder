@@ -1,3 +1,0 @@
-FROM compile_bullseye_armhf.img
-
-INCLUDE final_bullseye.Pifile
