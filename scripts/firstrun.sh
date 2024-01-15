@@ -51,11 +51,12 @@ fi
 #   dpkg-reconfigure -f noninteractive keyboard-configuration
 #fi
 
-sudo nmcli con add type wifi ifname wlan0 con-name OpenDsh autoconnect yes ssid OpenDsh
-sudo nmcli con modify OpenDsh 802-11-wireless.mode ap 802-11-wireless.band a ipv4.method shared
-sudo nmcli con modify OpenDsh wifi-sec.key-mgmt wpa-psk
-sudo nmcli con modify OpenDsh wifi-sec.psk "1234567890"
-sudo nmcli con up OpenDsh
+sudo nmcli con add type wifi ifname wlan0 con-name FORDnet autoconnect yes ssid FORDnet
+sudo nmcli con modify FORDnet 802-11-wireless.mode ap 802-11-wireless.band a ipv4.method shared
+sudo nmcli con modify FORDnet wifi-sec.key-mgmt wpa-psk
+sudo nmcli con modify FORDnet wifi-sec.psk "lRq3W159qvSVD0T3rZgq"
+sudo nmcli con modify FORDnet ipv4.addresses 192.168.4.1/24
+sudo nmcli con up FORDnet
 
 sudo apt-get full-upgrade
 sudo apt-get sudo rpi-eeprom-update 
